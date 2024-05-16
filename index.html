@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    
     <title>Document</title>
 </head>
-<body>
+<body id="grt">
     <header>
         <nav class="nav">
             <div class="box_logo"><a href="#" class="logo_link"><span class="logo_screenreader">КУЗОВКИН</span></a></div>
@@ -165,22 +166,24 @@
                     <div class="private_box_text">
                         <p class="private_text">Города A и B расположены на одном шоссе. Из этих городов одновременно в одном направлении выехали два автобуса. Первый автобус двигался со скоростью 54 км/ч, что составляет 0,6 скорости второго автобуса. Второй автобус догнал первый через 1 ч 30 мин после выезда. На каком расстоянии друг от друга были автобусы через 2 часа после выезда?</p>
                     </div>
+                    <div class="image_private">
+                    </div>
                     <div class="control_registration">
                         <button type="submit" class="private_button1"><a href="#" class="private_link">войти</a></button>
                         <button type="submit" class="private_button2"><a href="#" class="private_link">зарегистрироваться</a></button>
                     </div>       
                 </div>
-                <div class="image_private">
-                </div>
+                
             </div>
         </section>
         <article class="online_doska">
-            <div class="box_online_doska_image">
-                
-            </div>
             <div class="box_online_doska_text">
-                <h2 class="online_doska_title">Онлайн-доска для занятий с репетитором</h2>
-                <p class="online_doska_text">Даже работая удаленно преподавателю необходимо коммуницировать. Для этого на портале предусмотрена онлайн доска</p>
+                <div><h2 class="online_doska_title">Онлайн-доска для занятий с репетитором</h2></div>
+                <div><p class="online_doska_text">Даже работая удаленно преподавателю необходимо коммуницировать. Для этого на портале предусмотрена онлайн доска</p></div>
+            </div> 
+            <div class="box_online_doska_image">   
+            </div>  
+            <div class="box_online_doska_button">    
                 <button type="submit" class="online_doska_button"><a href="#" class="online_doska_link">Попробывать бесплатно</a></button>
             </div>    
         </article>
@@ -188,9 +191,34 @@
             <div class="box_questions_text">
                 <h2 class="online_doska_title">Остались вопросы? Задайте их нам!</h2>
                 <p class="online_doska_text">Позволь нам процитировать следующую фразу из Библии Просите И, и дано будет вам; ищите, и найдете; стучите, и отворят вам…  (Мф. 7. 7-9) наш коллектив с удовольствием на все вопросы ответит. Пишите нам в форму обратной связи!</p>
-                <button type="submit" class="questions_button"><a href="#" class="questions_link">Задать вопрос</a></button>
             </div>
             <div class="box_questions_image">    
+            </div>
+            <div class="box_questions_button">    
+                <button type="submit" class="questions_button"><a href="#" class="questions_link">Задать вопрос</a></button>
+            </div>
+            <div class="back_form">
+                <div class="box_logo"><a href="#" class="logo_link"><span class="logo_screenreader">КУЗОВКИН</span></a></div>
+                <h2 class="form_title">Форма обратной связи</h2>
+                <form class="form" action="#">
+                <div class="form_box">
+                    <p class="form_text">Имя</p>
+                    <input class="input" type="text"  required>
+                </div>
+                <div class="form_box">
+                    <p class="form_text">Фамилия</p>
+                    <input class="input" type="text" required>
+                </div>
+                <div class="form_box">
+                    <p class="form_text">Почта для связи</p>
+                    <input class="input" type="email" required>
+                </div>
+                <div class="form_box">
+                    <p class="form_text">Текст обращения</p>
+                    <textarea class="input"></textarea>
+                </div>
+                <button type="submit" class="form_button">Войти в личный кабинет</button>        
+                </form>
             </div>  
         </article>   
         <section class="comment">
@@ -285,6 +313,7 @@
             </div>        
         </div>
     </footer>
-
+    
+    <script src="js/script.js"></script>
 </body>
 </html>

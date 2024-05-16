@@ -59,15 +59,12 @@ body:before{
     
 }
 
-/* body:after{
+/* #grt:after{
     content:""; 
     position:absolute; 
-    right:-50%; 
-    bottom:40px; 
-    border:20px solid rgba(255,255,255,0.2); 
-    width:600px; 
-    height:600px; 
-    border-radius:600px;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 1;
 
 } */
 
@@ -533,7 +530,7 @@ main {
     margin-right: 350px;
 
     background-image: url("../images/print.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -568,14 +565,22 @@ main {
 }
 
 .private_box {
-    display: flex;
+    
     margin-top: 60px;
     justify-content: space-between;
 }
 
+.box_registration{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .image_private{
-    width: 100%;
-    margin-left: 290px;
+    width: 30%;
+    height: 40vh;
+    
+
 
     background-image: url("../images/private.png");
     background-size: contain;
@@ -584,10 +589,12 @@ main {
 
 .control_registration {
     display: flex;
-    margin-top: 130px;
+  
 }
 
 .private_box_text {
+    width: 50%;
+
     font-family: "Raleway";
     font-size: 24px;
     font-weight: Normal;
@@ -645,14 +652,14 @@ main {
 /* Онлайн доска */
 
 .online_doska {
-    display: flex;
+    
     margin-top: 100px;
-    justify-content: space-between;
+    
 }
 
 .box_online_doska_image{
-    width: 425px;
-    height: 340px;
+    width: 320px;
+    height: 250px;
     
      
     background-image: url("../images/OIG.png");
@@ -670,8 +677,14 @@ main {
     
 }
 
-.box_online_doska_text {
+.box_online_doska_text {  
     width: 566px;
+    float:right;
+}
+
+.box_online_doska_button{
+   margin-left: 1025px;
+   
 }
 
 .online_doska_text {
@@ -687,7 +700,7 @@ main {
 .online_doska_button {
     width: 369px;
     height: 60px;
-    margin-top: 63px;
+    
 
     background-color: #485FC7 ;
     border: none;
@@ -711,10 +724,9 @@ main {
 /* Вопросы и ответы */
 
 .questions {
-    display: flex;
     width: 100%;
     margin-top: 130px;
-    justify-content: space-between;
+    
 }
 
 .box_questions_text {
@@ -724,9 +736,14 @@ main {
 }
 
 .box_questions_image {
+    position: absolute;
     width: 420px;
     min-height: 410px;
+    right: 100px;
+    bottom: 835px;
+    /* float: right; */
     
+
     background-image: url("../images/questions.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -753,6 +770,78 @@ main {
     line-height: 32.87px;
     text-decoration: none;
     color: #ffffff;
+}
+.back_form{
+    display: none;
+    width: 534px;
+    height: 582px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #ffffff;
+    
+    
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.form_active{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+
+.form_title{
+    text-align: center;
+}
+
+.back_form .box_logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_box{
+    text-align: center;
+    
+}
+.form_box:nth-child(n+2){
+    margin-top: 20px;
+}
+
+.input{
+    width: 399px;
+    height: 35px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #ededed;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+.form_button{
+    width: 399px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 13%;
+
+    color:#ffffff;
+
+    background-color: #485FC7 ;
+    border: none;
+    border-radius: 10px;
+    
+    -webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 /* Отзывы */
@@ -1013,10 +1102,19 @@ footer{
     display: none;
 }
 
-/* @media (max-width: 400px) {
+@media (min-width: 320px) and (max-width: 600px) and (orientation: portrait) {
     main {
+        width: 100%;
+
         background-image: url("../images/Main_mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
     } 
+
+    body {
+        width: 100%;
+    }
 
     body::before{
         display: none;
@@ -1048,11 +1146,14 @@ footer{
     }
 
     .box_text { 
-      margin-left: 17%;
-      margin-right: 31%;
-      padding-top: 50px;
+      /* margin-left: 17%;
+      margin-right: 31%; */
+      margin: 0 auto;
+      
 
     }
+
+    
 
     .box_button {
         display: none;
@@ -1061,6 +1162,7 @@ footer{
     .preview_box {
         width: 100%;
         height: auto;
+        margin: 0 auto;
         
     }
     .preview {
@@ -1075,8 +1177,9 @@ footer{
 
     .preview_list_box {
         margin-top: 0;
-        margin-left: 18%;
-        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75vw;
 
         text-align: center;
     }
@@ -1090,8 +1193,11 @@ footer{
     }
 
     .button_start {
-        width: 281px;
-        margin-left: -50%;
+        width: 75vw;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 0;
         
     }
 
@@ -1105,8 +1211,8 @@ footer{
     }
 
     .box_about_title{
-        margin-left: 10%;
-        margin-right: 23%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about_title{
@@ -1119,14 +1225,14 @@ footer{
     }
 
     .about_text_box {
-        margin-left: 10%;
-        margin-right: 23%;
+        margin-left: auto;
+        margin-right: auto;
 
         font-family: "Raleway";
         font-size: 14px;
         font-weight: Normal;
         line-height: 16.44px;
-        text-align: left;
+        text-align: center;
     }
 
     .example_box {
@@ -1136,7 +1242,8 @@ footer{
     .example{
         width: 280px;
         height: 251px;
-        margin-left: 6%;
+        margin-left: auto;
+        margin-right: auto;
 
         text-align: center;
         
@@ -1177,7 +1284,9 @@ footer{
     }
 
     .card_generator {
-        width: 18em;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .gen_title_example{
@@ -1186,7 +1295,8 @@ footer{
 
     .generator_text_box {
         width: 18em;
-        margin-left: 3em;
+        margin-left: auto;
+        margin-right: auto;
 
         font-family: "Raleway";
         font-size: 14px;
@@ -1201,7 +1311,8 @@ footer{
 
     .generator_example_box{
         width: 18em;
-        margin-left: 1em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .gen_text{
@@ -1224,13 +1335,17 @@ footer{
     .image_generator {
         width: 75%;
         height: 300px;
-        margin-top: 20px;
-        margin-left: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        /* margin-top: 20px;
+        margin-left: 5%; */
     }
 
     .print_example {
         margin: 0;
-        height: auto;
+        
+        /* height: auto; */
     }
     .print_title{
         font-family: "Raleway";
@@ -1243,10 +1358,12 @@ footer{
 
     .print_box {
         width: 100%;
+        
         flex-direction: column;
     }
 
     .private {
+        width: 100%;
         margin: 0;
     }
 
@@ -1259,11 +1376,17 @@ footer{
 
     }
     .private_box {
+        flex: none;
+        position: relative;
         width: 100%;
-        margin-left: 50%;
-        flex-direction: column;
+        /* margin-left: 50%; */
+        /* flex-direction: column; */
     }
     .private_box_text {
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        
         font-family: "Raleway";
         font-size: 14px;
         font-weight: Normal;
@@ -1277,20 +1400,37 @@ footer{
     }
 
     .print_image{
-        width: 18em;
-        height: 200px;
+        width: 75vw;
+        height: 250px;
         
-        margin-left: 3em;
+        margin-left: auto;
+        margin-right: auto;
         
     }
 
-    .image_private{
+    .box_registration {
         width: 100%;
-        height: 300px;
+        flex-direction: column;
+    }
+
+    .box_text{
         margin-left: auto;
         margin-right: auto;
     }
+
+    .image_private{
+        
+        margin-left: auto;
+        margin-right: auto;
+        height: 40vh;
+        width:80vw;
+        
+           
+    }
     .control_registration{
+        margin-left: auto;
+        margin-right: auto;
+        
         flex-direction: column;
     }
 
@@ -1299,9 +1439,55 @@ footer{
         flex-direction: column;
     }
 
+    .private_button1{
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .private_button2{
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .box_questions_text {
-        width: 87%;
-        margin-left: 11%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    .box_online_doska_image{
+        width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .box_online_doska_button{
+        width: 100%;
+        float: none;
+        margin: 10px -190px;
+    }
+    .box_online_doska_text{
+        width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    .box_online_doska_text div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .online_doska_button{
+        margin-left: 50%;
+        margin-right: 50%;
     }
 
     .questions_button{
@@ -1325,6 +1511,12 @@ footer{
 
     }
 
+    .online_doska {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .online_doska_title{
         font-family: "Raleway";
         font-size: 24px;
@@ -1333,7 +1525,35 @@ footer{
         text-align: center;
 
     }
+    .questions{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
 
+    .box_questions_image{
+        position: static;
+        width: 75vw;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box_questions_text{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .box_questions_button{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .questions_button{
+        margin-top: 10px;
+    }
     .comment {
         display: none;
     }
@@ -1343,14 +1563,398 @@ footer{
     }
 
     .navigation_box {
+        display: block;
         width: 100%;
-        flex-wrap: wrap;
     }
 
+    .info_box{
+        width: 100%;
+        margin-left: 75px;
+        margin-right: auto;
+        text-align: center;
+    }
+    .info_list{
+        padding: 0;
+    }
+    .page_box{
+        display: inline-block;
+        width: fit-content;
+        margin-left: 75px;
+    }
+
+    .training_box{
+        display: inline-block;
+        
+        width: fit-content;
+    }
     .social_box {
         width: 100%;
 
         border: none;
         flex-direction: column;
     }
-} */
+}
+
+
+@media (min-width: 601px) and (max-width:900px){
+    main {
+        width: 100%;
+
+        background-image: url("../images/Main_mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    } 
+
+    
+
+    body {
+        width: 100%;
+    }
+
+    body::before{
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    header{
+        border: none;
+        box-shadow: none;
+    }
+
+    .title_main_link {
+        font-size: 20px;
+        line-height: 28.18px;
+    }
+
+    .title_main {
+        margin: 0;
+
+        font-size: 20px;
+        line-height: 28.18px;
+    }
+
+    .box_menu {
+        display: none;
+    }
+
+    .box_button {
+        display: none;
+    }
+
+    .preview_box {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        
+    }
+    .preview {
+        width: 100%;
+
+    }
+
+    .image_preview{
+        display: none;
+    }
+
+    .preview_text_box {
+        display: none;
+        
+    }
+
+    .preview_list_box {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75vw;
+
+        text-align: center;
+    }
+
+    .example {
+        width:25%;
+    }
+
+    .example:nth-child(n+2){
+        margin-left: 10px;
+    }
+
+    .example_card{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo_example {
+        width: fit-content;
+    }
+
+    .generator{
+        width: 100%;
+    }
+
+    .generator_box {
+        width: 100%;
+        
+    }
+
+    .card_generator {
+        width: 50%;
+    }
+
+    .image_generator{
+        width: 50%;
+    }
+
+    .generator_example_box{
+        font-family: "Raleway";
+        font-size: 14px;
+        font-weight: Normal;
+        line-height: 16.44px;
+        text-align: left;
+
+    }
+
+  
+    .mobile_text {
+        display: none;
+    }
+
+    .print_box {
+        width: 100%;
+    }
+
+    .print_image{
+        width: 120%;
+        margin-right: 0;
+    }
+
+    .print_text_box{
+        width: 50%;
+    }
+
+    .control_registration {
+        flex-direction: column;
+    }
+
+    .private_button2 {
+        margin-left: 0;
+    }
+
+    .box_online_doska_button {
+        margin-left: 370px;
+    }
+
+    .box_online_doska_text {
+        width:50%;
+    }
+
+    .box_questions_text{
+        width: 50%;
+        display: inline-block;
+    }
+
+    .box_questions_image{
+        width: 49%;
+        min-height: 320px;
+        
+        position: static;
+        float: none;
+        display: inline-block;
+    }
+
+    .questions_button{
+        margin-top: 0;
+    }
+
+    .comment{
+        display: none;
+    }
+    footer{
+        width: 100%;
+    }
+    .navigation_box{
+        display: block;
+        width: 100%;
+    }
+
+    .info_box{
+        margin-left: 25%;
+        
+    }
+
+    .page_box{
+        display: inline-block;
+        width: fit-content;
+        margin-left: 200px;
+    }
+
+    .training_box{
+        display: inline-block;
+        width: fit-content;
+        
+    }
+
+    .social_box{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .answer_box{
+        display: none;
+    }
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px){
+
+    header {
+        display: none;       
+    }
+
+    .preview_text_box {
+        display: none;
+    }
+
+    .image_preview {
+        display: none;
+    }
+
+    .preview_box {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        
+    }
+    .preview {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .button_start {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview_list_box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about_text_box {
+        text-align: center;
+    }
+
+    .example {
+        width:25%;
+    }
+
+    .example:nth-child(n+2){
+        margin-left: 10px;
+    }
+
+    .example_card{
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo_example {
+        width: fit-content;
+    }
+
+    .generator_box {
+        width: 100%;
+    }
+
+    .mobile_text {
+        display: none;
+    }
+
+    .print_example{
+        width: 100%;
+    }
+
+    .box_text {
+        text-align: center;
+    }
+
+    .print_box{
+        width: 100%;
+    }
+
+    .print_image{
+        background-size: contain;
+        margin-right: 15px;
+    }
+    .box_online_doska_button {
+        margin-left: 53%;
+    }
+
+    .box_questions_image{
+        position: static;
+        width: 30%;
+        min-height: 320px;
+        margin-left: 15%;
+        display: inline-block;
+
+        background-size: contain;
+
+        float: none;
+    }
+
+    .box_questions_text{
+        width: 50%;
+        display: inline-block;
+    }
+
+    .questions_button{
+        margin-top: 0;
+    }
+
+    .comment{
+        display: none;
+    }
+
+    footer{
+        width: 100%;
+    }
+    .navigation_box{
+        display: block;
+        width: 100%;
+    }
+
+    .info_box{
+        margin-left: 40%;
+        
+    }
+
+    .page_box{
+        display: inline-block;
+        width: fit-content;
+        margin-left: 40%;
+    }
+
+    .training_box{
+        display: inline-block;
+        width: fit-content;
+        
+    }
+
+    .social_box{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .answer_box{
+        display: none;
+    }
+}
