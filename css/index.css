@@ -1722,12 +1722,12 @@ footer{
     }
 
     .back_form {
-        width: 70%;
-        height: 70%;
+        width: 42%;
+        height: 43%;
     }
 
     .form_active{
-    transform: translate(-67%, -66%);
+    transform: translate(-115%, -114%);
   }
 
     .input{
